@@ -65,9 +65,12 @@ namespace LINQProblems
 
         public void FourthProblem()
         {
-            string source = "Terrill";
+            //4. Write a function that takes in a string of letters (i.e. “Terrill”) 
+            //and returns an alphabetically ordered string corresponding to the letter frequency (i.e. "E1I1L2R2T1")
+            Console.WriteLine("Enter the string.");
             string result = "";
-            var counts = source.ToLower().GroupBy(c => c).ToDictionary(grp => grp.Key, grp => grp.Count()).OrderBy(c => c.Key);
+            string s = Console.ReadLine();
+            var counts = s.ToUpper().GroupBy(c => c).ToDictionary(grp => grp.Key, grp => grp.Count()).OrderBy(c => c.Key);
             foreach (var item in counts)
             {
                 result += item.Key.ToString();
