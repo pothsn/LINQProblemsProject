@@ -16,8 +16,21 @@ namespace LINQProblems
             //Console.ReadLine();
 
             //Second problem test
+            //Problems problems = new Problems();
+            //problems.SecondProblem();
+            //Console.ReadLine();
+
+            //Third problem test
+            //Problems problems = new Problems();
+            //problems.ThirdProblem();
+            //Console.ReadLine();
+
+            //Fourth problem test
             Problems problems = new Problems();
-            problems.SecondProblem();
+            //string source = "steve";
+            problems.FourthProblem();
+            
+            
             Console.ReadLine();
 
         }
