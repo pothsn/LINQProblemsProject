@@ -60,7 +60,24 @@ namespace LINQProblems
             }
             double classGradeAverages = gradeAverages.Average();
             Console.WriteLine(classGradeAverages);
+        }
 
+        public void FourthProblem()
+        {
+            //4. Write a function that takes in a string of letters (i.e. “Terrill”) 
+            //and returns an alphabetically ordered string corresponding to the letter frequency (i.e. "E1I1L2R2T1")
+            Console.WriteLine("Enter the string.");
+            string result = "";
+            string s = Console.ReadLine();
+            var counts = s.GroupBy(c => c).ToDictionary(grp => grp.Key, grp => grp.Count()).OrderBy(c => c.Key);
+            //var counts = s.GroupBy(c => c).Select(g => new { Letter = g.Key, Count = g.Count() }).ToList();
+            foreach (var item in counts)
+            {
+                result += item.Letter.ToString();
+                result += item.Count.ToString();                
+            }
+            Console.WriteLine(result);
+            Console.ReadLine();
         }
     }
 }
