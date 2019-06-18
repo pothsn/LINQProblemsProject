@@ -15,12 +15,14 @@ namespace LINQProblems
             //problems.FirstProblem();
             //Console.ReadLine();
 
-            //Second problem test
+            ////Second problem test
+
             //Problems problems = new Problems();
             //problems.SecondProblem();
             //Console.ReadLine();
 
             //Third problem test
+
             //Problems problems = new Problems();
             //problems.ThirdProblem();
             //Console.ReadLine();
@@ -31,7 +33,7 @@ namespace LINQProblems
             problems.FourthProblem();
             
             
-            Console.ReadLine();
+
 
         }
     }
