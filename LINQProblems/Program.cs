@@ -27,8 +27,10 @@ namespace LINQProblems
 
             //Fourth problem test
             Problems problems = new Problems();
-            problems.FourthProblem();
 
+            problems.FourthProblem();
+            //string source = "steve";
+            problems.FourthProblem();
         }
     }
 }

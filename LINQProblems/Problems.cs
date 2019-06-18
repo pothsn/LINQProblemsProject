@@ -30,6 +30,7 @@ namespace LINQProblems
             }
         }
 
+
         public void ThirdProblem()
         {
             //3.Using LINQ, write a function that calculates the class grade average after dropping the lowest grade for each student.
@@ -45,7 +46,7 @@ namespace LINQProblems
             List<double> gradeAverages = new List<double>();
             foreach (string grade in grades)
             {
-                string [] studentGradeAray = grade.Split(',');
+                string[] studentGradeAray = grade.Split(',');
                 int[] intStudentGradeArray = Array.ConvertAll(studentGradeAray, g => int.Parse(g));
                 List<int> shorterIntStudentGradeArray = new List<int>();
                 for (int i = 0; i < intStudentGradeArray.Length; i++)
@@ -64,20 +65,19 @@ namespace LINQProblems
 
         public void FourthProblem()
         {
-            //4. Write a function that takes in a string of letters (i.e. “Terrill”) 
-            //and returns an alphabetically ordered string corresponding to the letter frequency (i.e. "E1I1L2R2T1")
-            Console.WriteLine("Enter the string.");
+            string source = "Terrill";
             string result = "";
-            string s = Console.ReadLine();
-            var counts = s.GroupBy(c => c).ToDictionary(grp => grp.Key, grp => grp.Count()).OrderBy(c => c.Key);
-            //var counts = s.GroupBy(c => c).Select(g => new { Letter = g.Key, Count = g.Count() }).ToList();
+            var counts = source.ToLower().GroupBy(c => c).ToDictionary(grp => grp.Key, grp => grp.Count()).OrderBy(c => c.Key);
             foreach (var item in counts)
             {
-                result += item.Letter.ToString();
-                result += item.Count.ToString();                
+                result += item.Key.ToString();
+                result += item.Value.ToString();
             }
             Console.WriteLine(result);
             Console.ReadLine();
         }
     }
 }
+
+
+
